@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #ebebeb;
+  color: #817d7d;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+  grid-template-rows: auto;
+  row-gap: 30px;
+  grid-template-areas: ". header ." ". nav ." ". movies ."; }
+  body header, body nav, body .movies {
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: 0 3.1px 6px rgba(0, 0, 0, 0.045), 0 28px 80px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0 3.1px 6px rgba(0, 0, 0, 0.045), 0 28px 80px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0 3.1px 6px rgba(0, 0, 0, 0.045), 0 28px 80px rgba(0, 0, 0, 0.07); }
+
+h1 {
+  color: #dd5555;
+  font-size: 30px;
+  margin-block-end: 0.2em; }
+
+h2 {
+  font-weight: 400;
+  font-size: 24px; }
+
+a {
+  text-decoration: none; }
+
+/* --------- INTRO Section ------------ */
+header {
+  grid-area: header;
+  text-align: center;
+  margin-top: 40px; }
+  header p {
+    text-align: justify;
+    margin-bottom: 15px; }
+  header a {
+    background-color: #dd5555;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    width: auto; }
+
+.img-cropper {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+  border: 3px solid #cccccc; }
+  .img-cropper img {
+    width: auto;
+    height: 100%; }
+
+/* --------- LINKS Section ------------ */
+nav {
+  grid-area: nav;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around; }
+  ul li {
+    text-align: center; }
+    ul li a, ul li a:visited, ul li a:active {
+      color: #cccccc; }
+    ul li a:hover {
+      color: #dd5555; }
+
+ul li a i {
+  font-size: 32px; }
+
+ul li a p {
+  margin-block-start: 0;
+  margin-block-end: 0; }
+
+/* --------- MOVIES Section ------------ */
+.movies {
+  grid-area: movies;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+  .movies .movie {
+    display: flex;
+    text-align: center;
+    margin-top: 30px; }
+    .movies .movie p {
+      text-align: justify; }
+    .movies .movie img {
+      width: 30%;
+      height: 100%;
+      margin-right: 10px; }
